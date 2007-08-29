@@ -42,5 +42,5 @@ replacement for IO::Scalar.
 %defattr(-,root,root)
 %doc README Changes
 %{perl_vendorlib}/IO
-%_mandir/man3/IO::String.3pm.bz2
+%_mandir/man3/IO::String.3pm*
 

@@ -1,7 +1,7 @@
 %define real_name	IO-String
 %define name		perl-%{real_name}
 %define version		1.08
-%define release		%mkrel 1
+%define release		%mkrel 2
 
 Summary:	A Perl module to read from strings
 Name:		%{name}

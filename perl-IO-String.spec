@@ -1,20 +1,18 @@
-%define real_name	IO-String
-%define name		perl-%{real_name}
-%define version		1.08
-%define release		%mkrel 4
+%define upstream_name	 IO-String
+%define upstream_version 1.08
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	A Perl module to read from strings
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
 License:	GPL
 Group:		Development/Perl
-Requires:	perl
-BuildRequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-root
-URL:		http://search.cpan.org/dist/%{real_name}/
-Source:		http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{real_name}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO::String is an IO::File (and IO::Handle) compatible class that read or
@@ -23,7 +21,7 @@ what I needed from Eryq's IO-stringy modules.  As such IO::String is a
 replacement for IO::Scalar.
 
 %prep
-%setup -q -n %{real_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,4 +41,3 @@ replacement for IO::Scalar.
 %doc README Changes
 %{perl_vendorlib}/IO
 %_mandir/man3/IO::String.3pm*
-

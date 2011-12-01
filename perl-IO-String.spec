@@ -34,7 +34,7 @@ replacement for IO::Scalar.
 %makeinstall_std
 
 %clean
-%{__rm} -rf $RPM_BUILD_ROOT
+%{__rm} -rf %{buildroot}
 
 %files
 %defattr(-,root,root)

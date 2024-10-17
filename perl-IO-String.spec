@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	21
 License:	GPLv2
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/IO::String
+Url:		https://metacpan.org/pod/IO::String
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(Test)

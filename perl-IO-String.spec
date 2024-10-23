@@ -4,7 +4,7 @@
 Summary:	A Perl module to read from strings
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	21
+Release:	22
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/IO::String

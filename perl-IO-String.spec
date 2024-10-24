@@ -1,14 +1,13 @@
 %define modname	IO-String
-%define modver	1.08
 
 Summary:	A Perl module to read from strings
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	22
+Version:	1.08
+Release:	1
 License:	GPLv2
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/IO::String
-Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{modname}-%{modver}.tar.bz2
+Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{modname}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
@@ -20,20 +19,19 @@ what I needed from Eryq's IO-stringy modules.  As such IO::String is a
 replacement for IO::Scalar.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Changes
 %{perl_vendorlib}/IO
 %{_mandir}/man3/IO::String.3pm*
-

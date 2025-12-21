@@ -9,6 +9,7 @@ Group:		Development/Perl
 Url:		https://metacpan.org/pod/IO::String
 Source0:	http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/%{modname}-%{version}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	make
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
 
